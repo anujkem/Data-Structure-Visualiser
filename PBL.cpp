@@ -32,7 +32,7 @@ void arrayDisplay()
     clock_t tStart = clock();
     
     cout<<"\n Current Array is : \n";
-    cout<<"\n\n\t------------------------------------------------------------------------------------------------------------------------";
+    cout<<"\n\n\t--------------------------------------------------------------";
     cout<<"\n\n\t  ";
     
     for(int i = 0 ; i < n - 1 ; i++)
@@ -42,7 +42,7 @@ void arrayDisplay()
     
     cout<<"［"<<a[n-1]<<"］";
     
-    cout<<"\n\n\t------------------------------------------------------------------------------------------------------------------------";
+    cout<<"\n\n\t--------------------------------------------------------------";
     cout<<"\n\n\n\n";
 
     printf(" Time taken for Traversal : %.7fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
@@ -406,10 +406,7 @@ void push(int val)
    
    printf(" Time taken in Inserting : %.7fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
    
-   cout<<"\n\n";
-   
-   display();
-   
+   cout<<"\n";
 }
 
 
@@ -758,7 +755,7 @@ void display(Tnode *ptr, int level)
         else
         {
             for (i = 0 ; i < level ; i++)
-                cout<<"        ";
+                cout<<"          ";
 	    }
 	    
         cout<<"|"<<ptr->info<<"|--［";
@@ -875,9 +872,9 @@ int main()
     
 do
 {
-    cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-    cout<<"\n\t\t\t\t\t   ||      Welcome To Data Structure Visualizer     ||";
-    cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+    cout<<"\n ||-----------------------------------------------||";
+    cout<<"\n ||      Welcome To Data Structure Visualizer     ||";
+    cout<<"\n ||-----------------------------------------------||";
     
     cout<<"\n\n\n\n Choose a Data Structure To perform Operations :";
     cout<<"\n\n 1. Stack  \n 2. Linked List \n 3. Array \n 4. Tree (BST) \n 5. Queue  \n 6. Exit";
@@ -894,9 +891,9 @@ do
           do 
            { cout << "\033[2J\033[1;1H";
            
-             cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-             cout<<"\n\t\t\t\t\t   ||           Stack Data Structure Menu           ||";
-             cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+             cout<<"\n ||-----------------------------------------------||";
+             cout<<"\n ||           Stack Data Structure Menu           ||";
+             cout<<"\n ||-----------------------------------------------||";
              
              cout<<"\n\n\n Operations ::\n";
              cout<<"\n 1 : Push \n 2 : Pop \n 3 : Visualise \n 4 : Go to Main Menu \n"<<endl;
@@ -921,6 +918,7 @@ do
                           push(val);
                           cout<<"\n";
                         }
+                        cout<<"\n\n";
                         display();
                         break;
          
@@ -957,9 +955,9 @@ do
              do
             {
               cout << "\033[2J\033[1;1H";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-              cout<<"\n\t\t\t\t\t   ||       Linked List Data Structure Menu         ||";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+             cout<<"\n ||-----------------------------------------------||";
+             cout<<"\n ||        Linked List  Data Structure Menu       ||";
+             cout<<"\n ||-----------------------------------------------||";
               
               cout<<"\n\n\n Operations ::\n";
               cout<<"\n 1. Visualise \n 2. Insert \n 3. Delete \n 4. Search\n 5. Go to Main Menu \n";
@@ -1016,9 +1014,9 @@ do
             do
             {
               cout << "\033[2J\033[1;1H";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-              cout<<"\n\t\t\t\t\t   ||            Array Data Structure Menu          ||";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+             cout<<"\n ||-----------------------------------------------||";
+             cout<<"\n ||           Array Data Structure Menu           ||";
+             cout<<"\n ||-----------------------------------------------||";
               
               cout<<"\n\n\n Operations ::\n";
               cout<<"\n 1. Create new Array \n 2. Visualise \n 3. Insert \n 4. Delete \n 5. Go to Main Menu \n";
@@ -1075,9 +1073,9 @@ do
             do
             {
               cout << "\033[2J\033[1;1H";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-              cout<<"\n\t\t\t\t\t   ||            Tree Data Structure Menu           ||";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+             cout<<"\n ||-----------------------------------------------||";
+             cout<<"\n ||           Tree Data Structure Menu            ||";
+             cout<<"\n ||-----------------------------------------------||";
               
               cout<<"\n\n\n Operations ::\n";
               cout<<"\n 1. Insert \n 2. Delete  \n 3. Inorder \n 4. Preorder \n 5. Postorder \n 6. Visualise \n 7. Go to Main Menu";
@@ -1127,6 +1125,7 @@ do
                            break;
                     
                    case 6: cout << "\033[2J\033[1;1H";
+                           cout << "\033[2J\033[1;1H";
                            cout<<"\n\n\n | Current BST | \n\n\n ";
                            display(root,1);
                            cout<<"\n\n";
@@ -1160,9 +1159,9 @@ do
             do
             {
               cout << "\033[2J\033[1;1H";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
-              cout<<"\n\t\t\t\t\t   ||            Queue Data Structure Menu          ||";
-              cout<<"\n\t\t\t\t\t   ||-----------------------------------------------||";
+             cout<<"\n ||-----------------------------------------------||";
+             cout<<"\n ||           Queue Data Structure Menu           ||";
+             cout<<"\n ||-----------------------------------------------||";
               
               cout<<"\n\n\n Operations ::\n";
               cout<<"\n 1. Insert \n 2. Delete  \n 3. Visualise \n 4. Go to Main Menu";
@@ -1216,5 +1215,3 @@ do
 
     return 0;
 }
-
-
